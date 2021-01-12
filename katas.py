@@ -2,7 +2,7 @@ def pig_it(text):  # 6/1/2021
     return ' '.join([i + 'ay' if i.isalpha() else i for i in [x[1:] + x[0] for x in text.split()]])
 
 #print(validBraces("[()]{{()}}"))   analisis de por patron
-def validBraces(string):
+def validBraces(string):    # 11/1/2021
     parenthesis = []
     pardict = {"{":"}", "[":"]", "(":")", "}":"{", "]":"[", ")":"("}
     for i in range(len(string)):
@@ -20,6 +20,15 @@ def validBraces(string):
         return False
     return True
 
+def max_sequence(arr):  # 12/1/2021
+    currentSum = 0
+    maxSum = 0
+    if(len(arr) == 0):
+        return 0
+    for x in arr:
+        currentSum = max(x, currentSum + x)
+        maxSum = max(maxSum, currentSum)
+    return maxSum
 
 """
 [ 1
