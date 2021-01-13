@@ -1,5 +1,6 @@
 from katas import pig_it
 from katas import validBraces
+from katas import snail
 if __name__ == '__main__':
     from undecorated import undecorated
 
@@ -22,4 +23,13 @@ if __name__ == '__main__':
     say_whee_org()
     #print(pig_it('Pig latin is cool ?'))
     print(validBraces("[()]{{()}}"))
+
+    print("\n\n\n")
+
+    array = [[1, 2, 3],
+             [4, 5, 6],
+             [7, 8, 9]]
+    expected = [1, 2, 3, 6, 9, 8, 7, 4, 5]
+    snail(array)
+
 

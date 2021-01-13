@@ -30,7 +30,28 @@ def max_sequence(arr):  # 12/1/2021
         maxSum = max(maxSum, currentSum)
     return maxSum
 
+def snail(snail_map):
+    l=[]
+    while len(snail_map):
+        l.extend(snail_map[0])
+        snail_map.pop(0)
+        snail_map=list(reversed(list(zip(*snail_map[::1]))))
+    return l
+
 """
+
+
+array = [[1,2,3],
+         [4,5,6],
+         [7,8,9]]
+         
+         6,9
+         5,8
+         4,7
+expected = [1,2,3,6,9,8,7,4,5]
+test.assert_equals(snail(array), expected)
+
+
 [ 1
 ] 2
 ( 3
