@@ -1,6 +1,10 @@
 from katas import pig_it
 from katas import validBraces
 from katas import snail
+from katas import encode
+from katas import decode
+from katas import int32_to_ip
+from katas import parts_sums
 if __name__ == '__main__':
     from undecorated import undecorated
 
@@ -32,4 +36,11 @@ if __name__ == '__main__':
     expected = [1, 2, 3, 6, 9, 8, 7, 4, 5]
     snail(array)
 
+    print(encode("hey h"))
+    print(decode("000111111000111000000000000111111000000111000111000111111111111000000111000000111000000000000000000111111000111000000000")+"*")
+            #      0   1   0   0    0  0   0   0   0    1  1   0   0   1   0   1
+            #       01000000
+    print("CODIGOS IP4")
+    print(int32_to_ip(10))
 
+    print(parts_sums([0, 1, 3, 6, 10]))
